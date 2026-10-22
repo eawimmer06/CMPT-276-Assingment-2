@@ -2,12 +2,23 @@ services:
   - type: web
     name: rate-cs-teaching-staff
     runtime: docker
-    buildCommand: mvn clean package -DskipTests
-    startCommand: java -Dserver.port=$PORT -jar target/rate-cs-teaching-staff-0.0.1-SNAPSHOT.jar
+    plan: free
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: DATABASE_URL
-        sync: false
-      - key: DB_USERNAME
-        sync: false
-      - key: DB_PASSWORD
-        sync: false
+        fromDatabase:
+          name: rate-teaching-staff-db
+          property: connectionString
+      - key: DATABASE_USERNAME
+        fromDatabase:
+          name: rate-teaching-staff-db
+          property: user
+      - key: DATABASE_PASSWORD
+        fromDatabase:
+          name: rate-teaching-staff-db
+          property: password
+
+databases:
+  - name: rate-teaching-staff-db
+    databaseName: rate_teaching_staff
+    user: rate_teaching_staff_user
