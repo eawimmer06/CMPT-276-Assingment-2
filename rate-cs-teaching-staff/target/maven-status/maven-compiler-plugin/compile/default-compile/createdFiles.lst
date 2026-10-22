@@ -1,0 +1,11 @@
+ca/sfu/rating/model/StaffRating$1.class
+ca/sfu/rating/model/StaffRating$2.class
+ca/sfu/rating/model/TAProfile.class
+ca/sfu/rating/service/StaffRatingService.class
+ca/sfu/rating/controller/StaffRatingController.class
+ca/sfu/rating/repository/StaffRatingRepository.class
+ca/sfu/rating/model/RoleType.class
+ca/sfu/rating/model/ProfessorProfile.class
+ca/sfu/rating/model/StaffMemberProfile.class
+ca/sfu/rating/model/StaffRating.class
+ca/sfu/rating/RateCsTeachingStaffApplication.class

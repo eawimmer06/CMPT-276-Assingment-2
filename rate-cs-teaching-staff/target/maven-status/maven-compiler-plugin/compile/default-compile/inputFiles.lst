@@ -1,0 +1,9 @@
+/mnt/c/Users/elysi/CMPT 276/rate-cs-teaching-staff/rate-cs-teaching-staff/src/main/java/ca/sfu/rating/RateCsTeachingStaffApplication.java
+/mnt/c/Users/elysi/CMPT 276/rate-cs-teaching-staff/rate-cs-teaching-staff/src/main/java/ca/sfu/rating/controller/StaffRatingController.java
+/mnt/c/Users/elysi/CMPT 276/rate-cs-teaching-staff/rate-cs-teaching-staff/src/main/java/ca/sfu/rating/model/ProfessorProfile.java
+/mnt/c/Users/elysi/CMPT 276/rate-cs-teaching-staff/rate-cs-teaching-staff/src/main/java/ca/sfu/rating/model/RoleType.java
+/mnt/c/Users/elysi/CMPT 276/rate-cs-teaching-staff/rate-cs-teaching-staff/src/main/java/ca/sfu/rating/model/StaffMemberProfile.java
+/mnt/c/Users/elysi/CMPT 276/rate-cs-teaching-staff/rate-cs-teaching-staff/src/main/java/ca/sfu/rating/model/StaffRating.java
+/mnt/c/Users/elysi/CMPT 276/rate-cs-teaching-staff/rate-cs-teaching-staff/src/main/java/ca/sfu/rating/model/TAProfile.java
+/mnt/c/Users/elysi/CMPT 276/rate-cs-teaching-staff/rate-cs-teaching-staff/src/main/java/ca/sfu/rating/repository/StaffRatingRepository.java
+/mnt/c/Users/elysi/CMPT 276/rate-cs-teaching-staff/rate-cs-teaching-staff/src/main/java/ca/sfu/rating/service/StaffRatingService.java
