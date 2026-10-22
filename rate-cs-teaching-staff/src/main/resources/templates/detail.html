@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Rating details</title><link rel="stylesheet" th:href="@{/css/style.css}"></head>
+<body><main class="container narrow"><a th:href="@{/}">← All ratings</a><p class="success" th:if="${successMessage}" th:text="${successMessage}"></p>
+<h1 th:text="${rating.name}"></h1><p class="role-title" th:text="${profile.displayTitle()}"></p>
+<section class="panel"><dl>
+<dt>Email</dt><dd th:text="${rating.email}"></dd><dt>Role type</dt><dd th:text="${rating.roleType}"></dd>
+<dt>Clarity</dt><dd th:text="${rating.clarity} + '/10'"></dd><dt>Niceness</dt><dd th:text="${rating.niceness} + '/10'"></dd>
+<dt>Knowledgeable</dt><dd th:text="${rating.knowledgeableScore} + '/10'"></dd><dt>Overall score</dt><dd th:text="${rating.overallScore()} + '/10'"></dd>
+<dt>Comment</dt><dd th:text="${#strings.isEmpty(rating.comment) ? 'No comment provided.' : rating.comment}"></dd>
+<dt>Created</dt><dd th:text="${rating.createdAt}"></dd><dt>Last updated</dt><dd th:text="${rating.updatedAt}"></dd>
+</dl></section>
+<div class="actions"><a class="button" th:href="@{/ratings/{id}/edit(id=${rating.id})}">Edit</a>
+<form th:action="@{/ratings/{id}/delete(id=${rating.id})}" method="post" onsubmit="return confirm('Delete this rating permanently?');"><button class="button danger" type="submit">Delete</button></form></div>
+</main></body></html>

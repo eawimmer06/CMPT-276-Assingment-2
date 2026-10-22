@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Edit rating</title><link rel="stylesheet" th:href="@{/css/style.css}"></head>
+<body><main class="container narrow"><a th:href="@{/ratings/{id}(id=${rating.id})}">← Back to rating</a><h1>Edit staff rating</h1><form class="panel form" th:action="@{/ratings/{id}/edit(id=${rating.id})}" th:object="${rating}" method="post">
+<div th:if="${#fields.hasGlobalErrors()}" class="error"><p th:each="err : ${#fields.globalErrors()}" th:text="${err}"></p></div>
+<div th:replace="~{_form :: *}"></div><div class="actions"><button class="button" type="submit">Save changes</button><a class="button secondary" th:href="@{/ratings/{id}(id=${rating.id})}">Cancel</a></div></form></main></body></html>

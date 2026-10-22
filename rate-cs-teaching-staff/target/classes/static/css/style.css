@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #1f2937; background: #f4f6fa; }
+body { margin: 0; }
+.container { width: min(100% - 2rem, 1000px); margin: 3rem auto; }
+.narrow { max-width: 700px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 2rem; }
+h1 { margin-bottom: .35rem; } p { line-height: 1.5; }
+a { color: #2457a7; } .button { display: inline-block; border: 0; border-radius: 8px; background: #2457a7; color: white; padding: .7rem 1rem; text-decoration: none; font: inherit; cursor: pointer; }
+.button:hover { background: #193f7e; } .secondary { background: #e5e7eb; color: #111827; } .danger { background: #b42318; }
+.panel, .empty { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 3px 12px #1118270a; }
+.table-wrap { overflow-x: auto; background: white; border: 1px solid #e5e7eb; border-radius: 12px; }
+table { width: 100%; border-collapse: collapse; } th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #e5e7eb; } th { background: #f9fafb; } tr:last-child td { border-bottom: 0; }
+.form { display: grid; gap: 1.1rem; } .field { display: grid; gap: .4rem; } label { font-weight: 650; }
+input, select, textarea { width: 100%; border: 1px solid #cbd5e1; border-radius: 7px; padding: .7rem; font: inherit; background: white; }
+input:focus, select:focus, textarea:focus { outline: 2px solid #93c5fd; border-color: #2457a7; }
+.field-error, .error { color: #b42318; margin: 0; } .success { padding: .8rem 1rem; color: #166534; background: #dcfce7; border-radius: 8px; }
+.actions { display: flex; align-items: center; gap: .75rem; margin-top: 1rem; flex-wrap: wrap; } .actions form { margin: 0; }
+dl { display: grid; grid-template-columns: minmax(120px, 1fr) 2fr; gap: .8rem 1rem; } dt { font-weight: 700; } dd { margin: 0; overflow-wrap: anywhere; }
+.role-title { color: #4b5563; } .muted { color: #6b7280; font-size: .9rem; } .empty { text-align: center; }
+@media (max-width: 600px) { .container { margin: 1.5rem auto; } .top { align-items: flex-start; flex-direction: column; } dl { grid-template-columns: 1fr; gap: .25rem; } dd { margin-bottom: .8rem; } }

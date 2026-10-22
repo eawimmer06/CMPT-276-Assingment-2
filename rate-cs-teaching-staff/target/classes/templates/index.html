@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Rate CS Teaching Staff</title><link rel="stylesheet" th:href="@{/css/style.css}"></head>
+<body><main class="container">
+<header class="top"><div><h1>Rate CS Teaching Staff</h1><p>Browse submitted teaching staff ratings.</p></div><a class="button" th:href="@{/ratings/new}">Add a rating</a></header>
+<p class="success" th:if="${successMessage}" th:text="${successMessage}"></p><p class="error" th:if="${errorMessage}" th:text="${errorMessage}"></p>
+<div th:if="${#lists.isEmpty(ratings)}" class="empty"><h2>No ratings yet</h2><p>Be the first to add a staff rating.</p><a th:href="@{/ratings/new}">Create a rating</a></div>
+<div class="table-wrap" th:unless="${#lists.isEmpty(ratings)}"><table><thead><tr><th>Name</th><th>Role</th><th>Overall score</th><th>Details</th></tr></thead><tbody>
+<tr th:each="rating : ${ratings}"><td th:text="${rating.name}"></td><td th:text="${rating.roleType}"></td><td><span th:text="${rating.overallScore()}"></span>/10</td><td><a th:href="@{/ratings/{id}(id=${rating.id})}">View rating</a></td></tr>
+</tbody></table></div>
+<p class="muted">Overall score is the rounded average of clarity, niceness, and knowledgeable score.</p>
+</main></body></html>
