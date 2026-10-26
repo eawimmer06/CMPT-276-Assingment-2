@@ -1,38 +1,40 @@
-<div class="field">
-  <label for="name">Name</label>
-  <input id="name" type="text" th:field="*{name}" required minlength="2" maxlength="80">
-  <p class="field-error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
-</div>
-<div class="field">
-  <label for="email">Email (must be unique)</label>
-  <input id="email" type="email" th:field="*{email}" required maxlength="254">
-  <p class="field-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
-</div>
-<div class="field">
-  <label for="roleType">Role</label>
-  <select id="roleType" th:field="*{roleType}" required>
-    <option value="">Choose a role</option>
-    <option th:each="role : ${roles}" th:value="${role}" th:text="${role}"></option>
-  </select>
-  <p class="field-error" th:if="${#fields.hasErrors('roleType')}" th:errors="*{roleType}"></p>
-</div>
-<div class="field">
-  <label for="clarity">Clarity (1–10)</label>
-  <input id="clarity" type="number" th:field="*{clarity}" min="1" max="10" required>
-  <p class="field-error" th:if="${#fields.hasErrors('clarity')}" th:errors="*{clarity}"></p>
-</div>
-<div class="field">
-  <label for="niceness">Niceness (1–10)</label>
-  <input id="niceness" type="number" th:field="*{niceness}" min="1" max="10" required>
-  <p class="field-error" th:if="${#fields.hasErrors('niceness')}" th:errors="*{niceness}"></p>
-</div>
-<div class="field">
-  <label for="knowledgeableScore">Knowledgeable (1–10)</label>
-  <input id="knowledgeableScore" type="number" th:field="*{knowledgeableScore}" min="1" max="10" required>
-  <p class="field-error" th:if="${#fields.hasErrors('knowledgeableScore')}" th:errors="*{knowledgeableScore}"></p>
-</div>
-<div class="field">
-  <label for="comment">Comment (optional, max 1000 characters)</label>
-  <textarea id="comment" th:field="*{comment}" maxlength="1000" rows="5"></textarea>
-  <p class="field-error" th:if="${#fields.hasErrors('comment')}" th:errors="*{comment}"></p>
+<div th:fragment="fields">
+  <div class="field">
+    <label for="name">Name</label>
+    <input id="name" type="text" th:field="*{name}" required minlength="2" maxlength="80">
+    <p class="field-error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+  </div>
+  <div class="field">
+    <label for="email">Email (must be unique)</label>
+    <input id="email" type="email" th:field="*{email}" required maxlength="254">
+    <p class="field-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+  </div>
+  <div class="field">
+    <label for="roleType">Role</label>
+    <select id="roleType" th:field="*{roleType}" required>
+      <option value="">Choose a role</option>
+      <option th:each="role : ${roles}" th:value="${role}" th:text="${role}"></option>
+    </select>
+    <p class="field-error" th:if="${#fields.hasErrors('roleType')}" th:errors="*{roleType}"></p>
+  </div>
+  <div class="field">
+    <label for="clarity">Clarity (1–10)</label>
+    <input id="clarity" type="number" th:field="*{clarity}" min="1" max="10" required>
+    <p class="field-error" th:if="${#fields.hasErrors('clarity')}" th:errors="*{clarity}"></p>
+  </div>
+  <div class="field">
+    <label for="niceness">Niceness (1–10)</label>
+    <input id="niceness" type="number" th:field="*{niceness}" min="1" max="10" required>
+    <p class="field-error" th:if="${#fields.hasErrors('niceness')}" th:errors="*{niceness}"></p>
+  </div>
+  <div class="field">
+    <label for="knowledgeableScore">Knowledgeable (1–10)</label>
+    <input id="knowledgeableScore" type="number" th:field="*{knowledgeableScore}" min="1" max="10" required>
+    <p class="field-error" th:if="${#fields.hasErrors('knowledgeableScore')}" th:errors="*{knowledgeableScore}"></p>
+  </div>
+  <div class="field">
+    <label for="comment">Comment (optional, max 1000 characters)</label>
+    <textarea id="comment" th:field="*{comment}" maxlength="1000" rows="5"></textarea>
+    <p class="field-error" th:if="${#fields.hasErrors('comment')}" th:errors="*{comment}"></p>
+  </div>
 </div>
